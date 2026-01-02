@@ -1,0 +1,305 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== HEADINGS ===== */
+h1 {
+    color: #333;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 4px solid #667eea;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+h2 {
+    color: #444;
+    margin-bottom: 10px;
+}
+
+/* ===== BUTTONS AND LINKS ===== */
+.create-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: rgb(130, 20, 20);
+    text-decoration: none;
+    border-radius: 25px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.create-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+/* ===== POST LIST ===== */
+ul {
+    list-style: none;
+}
+
+li {
+    background: #f8f9fa;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-left: 5px solid #667eea;
+}
+
+li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+li h2 a {
+    color: #667eea;
+    text-decoration: none;
+    font-size: 1.5em;
+    transition: color 0.3s;
+}
+
+li h2 a:hover {
+    color: #764ba2;
+    text-decoration: underline;
+}
+
+li p {
+    color: #666;
+    margin: 10px 0;
+    font-size: 0.95em;
+}
+
+/* ===== POST ACTIONS ===== */
+.post-actions {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #ddd;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.post-actions a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.post-actions a:hover {
+    color: #764ba2;
+}
+
+.post-actions button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.post-actions button:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+}
+
+.post-actions form {
+    margin: 0;
+    padding: 0;
+    background: none;
+    box-shadow: none;
+}
+
+/* ===== FORMS ===== */
+form {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form div {
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: inherit;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+form button[type="submit"] {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 12px 35px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+form button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+form a {
+    color: #666;
+    text-decoration: none;
+    padding: 12px 25px;
+    transition: color 0.3s;
+}
+
+form a:hover {
+    color: #333;
+    text-decoration: underline;
+}
+
+/* ===== SINGLE POST VIEW ===== */
+.post-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.post-container h1 {
+    color: #667eea;
+    font-size: 2.2em;
+    margin-bottom: 15px;
+    text-align: left;
+    border: none;
+    padding: 0;
+}
+
+.author {
+    color: #888;
+    font-style: italic;
+    margin: 10px 0 30px 0;
+    font-size: 1.1em;
+}
+
+.post-content {
+    line-height: 1.8;
+    margin: 30px 0;
+    padding: 25px;
+    background-color: #f8f9fa;
+    border-left: 5px solid #667eea;
+    border-radius: 8px;
+    font-size: 1.05em;
+    color: #333;
+}
+
+/* ===== NO POSTS MESSAGE ===== */
+p {
+    color: #666;
+    font-size: 1.1em;
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    .container,
+    .post-container {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    form {
+        padding: 20px;
+    }
+    
+    .post-actions {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    li h2 a {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+    }
+    
+    .create-btn {
+        display: block;
+        text-align: center;
+    }
+    
+    li {
+        padding: 15px;
+    }
+}

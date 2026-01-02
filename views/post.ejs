@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= post.title %></title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="post-container">
+        <h1><%= post.title %></h1>
+        <p class="author">By <%= post.author %></p>
+        
+        <div class="post-content">
+            <p><%= post.content %></p>
+        </div>
+        
+        <div class="post-actions">
+            <a href="/">Back to Home</a>
+            <a href="/edit/<%= post.id %>">Edit</a>
+            <form method="POST" action="/delete/<%= post.id %>" style="display:inline;">
+                <button type="submit">Delete</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
